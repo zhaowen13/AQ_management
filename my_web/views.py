@@ -32,8 +32,5 @@ class CaseViewSet(viewsets.ModelViewSet):
                 return Response({"message": "添加成功"})
 
 class UserViewSet(viewsets.ModelViewSet):
-    """
-    允许用户查看或编辑的API路径。
-    """
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
